@@ -1,0 +1,354 @@
+{
+  "version": "1.0.0",
+  "name": "Metro Metropolitan Critical Infrastructure Network",
+  "generated_for": "SENTINEL Z - CrisisGraph Engine",
+  "nodes": [
+    {
+      "id": "sub_alpha",
+      "name": "Alpha Transmission Substation (500kV)",
+      "type": "substation",
+      "criticality": 0.95,
+      "status": "nominal",
+      "metadata": {
+        "voltage_class": "500kV",
+        "rated_capacity_mva": 600.0,
+        "primary_source": "Hydro/Nuclear Grid Interconnect",
+        "cooling_system": "Forced Oil Water (FOW)",
+        "coordinates": {"x": 100, "y": 140}
+      }
+    },
+    {
+      "id": "sub_beta",
+      "name": "Beta Regional Substation (230kV)",
+      "type": "substation",
+      "criticality": 0.85,
+      "status": "nominal",
+      "metadata": {
+        "voltage_class": "230kV",
+        "rated_capacity_mva": 400.0,
+        "primary_source": "Thermal Reserve Peaker",
+        "cooling_system": "Oil Natural Air Forced (ONAF)",
+        "coordinates": {"x": 100, "y": 420}
+      }
+    },
+    {
+      "id": "trans_t1",
+      "name": "Step-Down Transformer T-101",
+      "type": "transformer",
+      "criticality": 0.82,
+      "status": "nominal",
+      "metadata": {
+        "ratio": "500kV/115kV",
+        "rated_capacity_mva": 250.0,
+        "cooling_type": "ONAF",
+        "current_load_pct": 58.0,
+        "coordinates": {"x": 300, "y": 100}
+      }
+    },
+    {
+      "id": "trans_t2",
+      "name": "Step-Down Transformer T-102",
+      "type": "transformer",
+      "criticality": 0.78,
+      "status": "nominal",
+      "metadata": {
+        "ratio": "500kV/115kV",
+        "rated_capacity_mva": 220.0,
+        "cooling_type": "ONAF",
+        "current_load_pct": 62.0,
+        "coordinates": {"x": 300, "y": 240}
+      }
+    },
+    {
+      "id": "trans_t3",
+      "name": "Step-Down Transformer T-201",
+      "type": "transformer",
+      "criticality": 0.75,
+      "status": "nominal",
+      "metadata": {
+        "ratio": "230kV/69kV",
+        "rated_capacity_mva": 180.0,
+        "cooling_type": "ONAN",
+        "current_load_pct": 52.0,
+        "coordinates": {"x": 300, "y": 420}
+      }
+    },
+    {
+      "id": "hosp_metro",
+      "name": "Metro General Hospital",
+      "type": "hospital",
+      "criticality": 0.98,
+      "status": "nominal",
+      "metadata": {
+        "facility_level": "Level 1 Trauma Center",
+        "bed_capacity": 850,
+        "icu_capacity": 120,
+        "backup_generator": true,
+        "backup_fuel_hours": 18.0,
+        "coordinates": {"x": 540, "y": 80}
+      }
+    },
+    {
+      "id": "hosp_stjude",
+      "name": "St. Jude Community Hospital",
+      "type": "hospital",
+      "criticality": 0.84,
+      "status": "nominal",
+      "metadata": {
+        "facility_level": "Acute Care Center",
+        "bed_capacity": 320,
+        "icu_capacity": 45,
+        "backup_generator": true,
+        "backup_fuel_hours": 12.0,
+        "coordinates": {"x": 540, "y": 190}
+      }
+    },
+    {
+      "id": "hosp_children",
+      "name": "Children's Specialized Medical Center",
+      "type": "hospital",
+      "criticality": 0.92,
+      "status": "nominal",
+      "metadata": {
+        "facility_level": "Pediatric Intensive Care",
+        "bed_capacity": 240,
+        "icu_capacity": 60,
+        "backup_generator": true,
+        "backup_fuel_hours": 24.0,
+        "coordinates": {"x": 540, "y": 290}
+      }
+    },
+    {
+      "id": "traffic_port_tunnel",
+      "name": "Port Expressway & Tunnel Ventilation System",
+      "type": "traffic_system",
+      "criticality": 0.88,
+      "status": "nominal",
+      "metadata": {
+        "tunnel_length_km": 3.4,
+        "forced_ventilation_fans": 12,
+        "daily_vehicle_traffic": 75000,
+        "coordinates": {"x": 780, "y": 80}
+      }
+    },
+    {
+      "id": "traffic_tmc",
+      "name": "Metro Traffic Management Center",
+      "type": "traffic_system",
+      "criticality": 0.76,
+      "status": "nominal",
+      "metadata": {
+        "controlled_intersections": 420,
+        "dynamic_signal_failover": true,
+        "cctv_feeds": 310,
+        "coordinates": {"x": 780, "y": 200}
+      }
+    },
+    {
+      "id": "traffic_corridor",
+      "name": "Downtown Transit & Light Rail Corridor",
+      "type": "traffic_system",
+      "criticality": 0.68,
+      "status": "nominal",
+      "metadata": {
+        "light_rail_lines": 4,
+        "automated_signaling": true,
+        "daily_ridership": 110000,
+        "coordinates": {"x": 980, "y": 200}
+      }
+    },
+    {
+      "id": "comm_fiber_hub",
+      "name": "Central Telecom & Fiber Gateway",
+      "type": "communication_hub",
+      "criticality": 0.91,
+      "status": "nominal",
+      "metadata": {
+        "backbone_bandwidth_gbps": 100,
+        "backup_ups_battery_hours": 8.0,
+        "data_center_tier": "Tier 3",
+        "coordinates": {"x": 540, "y": 420}
+      }
+    },
+    {
+      "id": "comm_cellular_alpha",
+      "name": "Cellular Sector Grid Alpha",
+      "type": "communication_hub",
+      "criticality": 0.72,
+      "status": "nominal",
+      "metadata": {
+        "towers_count": 28,
+        "coverage_radius_km": 16.5,
+        "firstnet_enabled": true,
+        "coordinates": {"x": 780, "y": 340}
+      }
+    },
+    {
+      "id": "emerg_dispatch",
+      "name": "Regional 911 Emergency Dispatch",
+      "type": "emergency_facility",
+      "criticality": 0.96,
+      "status": "nominal",
+      "metadata": {
+        "cad_consoles": 48,
+        "dual_power_feed": true,
+        "dispatch_coverage_population": 1200000,
+        "coordinates": {"x": 780, "y": 460}
+      }
+    },
+    {
+      "id": "emerg_water",
+      "name": "City Water Treatment & Pumping Station",
+      "type": "emergency_facility",
+      "criticality": 0.89,
+      "status": "nominal",
+      "metadata": {
+        "daily_capacity_mld": 320,
+        "gravity_feed_reserve_hours": 6.0,
+        "fire_hydrant_pressure_psi": 85,
+        "coordinates": {"x": 540, "y": 540}
+      }
+    },
+    {
+      "id": "emerg_fire_hq",
+      "name": "Metro Fire Department Command Headquarters",
+      "type": "emergency_facility",
+      "criticality": 0.86,
+      "status": "nominal",
+      "metadata": {
+        "active_stations_linked": 18,
+        "rapid_response_radius_km": 14.0,
+        "emergency_ops_center": true,
+        "coordinates": {"x": 980, "y": 460}
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "sub_alpha",
+      "target": "trans_t1",
+      "dependency_strength": 0.95,
+      "dependency_type": "power",
+      "alternative_path_exists": true
+    },
+    {
+      "source": "sub_alpha",
+      "target": "trans_t2",
+      "dependency_strength": 0.95,
+      "dependency_type": "power",
+      "alternative_path_exists": false
+    },
+    {
+      "source": "sub_beta",
+      "target": "trans_t3",
+      "dependency_strength": 0.90,
+      "dependency_type": "power",
+      "alternative_path_exists": true
+    },
+    {
+      "source": "trans_t1",
+      "target": "hosp_metro",
+      "dependency_strength": 0.95,
+      "dependency_type": "power",
+      "alternative_path_exists": true
+    },
+    {
+      "source": "trans_t1",
+      "target": "traffic_port_tunnel",
+      "dependency_strength": 0.90,
+      "dependency_type": "power",
+      "alternative_path_exists": false
+    },
+    {
+      "source": "trans_t2",
+      "target": "hosp_stjude",
+      "dependency_strength": 0.88,
+      "dependency_type": "power",
+      "alternative_path_exists": false
+    },
+    {
+      "source": "trans_t2",
+      "target": "hosp_children",
+      "dependency_strength": 0.90,
+      "dependency_type": "power",
+      "alternative_path_exists": true
+    },
+    {
+      "source": "trans_t2",
+      "target": "traffic_tmc",
+      "dependency_strength": 0.78,
+      "dependency_type": "power",
+      "alternative_path_exists": true
+    },
+    {
+      "source": "trans_t3",
+      "target": "comm_fiber_hub",
+      "dependency_strength": 0.92,
+      "dependency_type": "power",
+      "alternative_path_exists": false
+    },
+    {
+      "source": "trans_t3",
+      "target": "emerg_water",
+      "dependency_strength": 0.88,
+      "dependency_type": "power",
+      "alternative_path_exists": true
+    },
+    {
+      "source": "comm_fiber_hub",
+      "target": "comm_cellular_alpha",
+      "dependency_strength": 0.85,
+      "dependency_type": "telecom",
+      "alternative_path_exists": false
+    },
+    {
+      "source": "comm_fiber_hub",
+      "target": "emerg_dispatch",
+      "dependency_strength": 0.94,
+      "dependency_type": "telecom",
+      "alternative_path_exists": true
+    },
+    {
+      "source": "comm_fiber_hub",
+      "target": "traffic_tmc",
+      "dependency_strength": 0.74,
+      "dependency_type": "telecom",
+      "alternative_path_exists": false
+    },
+    {
+      "source": "traffic_tmc",
+      "target": "traffic_corridor",
+      "dependency_strength": 0.82,
+      "dependency_type": "operational",
+      "alternative_path_exists": false
+    },
+    {
+      "source": "emerg_dispatch",
+      "target": "emerg_fire_hq",
+      "dependency_strength": 0.91,
+      "dependency_type": "operational",
+      "alternative_path_exists": true
+    },
+    {
+      "source": "comm_cellular_alpha",
+      "target": "emerg_fire_hq",
+      "dependency_strength": 0.68,
+      "dependency_type": "telecom",
+      "alternative_path_exists": true
+    },
+    {
+      "source": "emerg_water",
+      "target": "hosp_metro",
+      "dependency_strength": 0.65,
+      "dependency_type": "water",
+      "alternative_path_exists": true
+    },
+    {
+      "source": "emerg_water",
+      "target": "emerg_fire_hq",
+      "dependency_strength": 0.85,
+      "dependency_type": "water",
+      "alternative_path_exists": false
+    }
+  ]
+}
